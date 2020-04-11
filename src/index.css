@@ -1,4 +1,5 @@
 body {
+  padding: 10px;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +11,30 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.scrollbar {
+  position: relative;
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.avatar {
+  width: 20px;
+  height: 20px;
+}
+
+.card {
+  padding: 10px;
+}
+
+.project {
+  display: flex;
+  width: 300px;
+min-height: 300px;
+}
+
+.moreButton {
+  vertical-align: bottom;
+  padding: 20px;
 }
