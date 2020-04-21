@@ -12,7 +12,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+.load-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .scrollbar {
   position: relative;
   overflow-y: scroll;
@@ -29,12 +34,51 @@ code {
 }
 
 .project {
-  display: flex;
-  width: 300px;
-min-height: 300px;
+  min-width: 300px !important;
 }
 
-.moreButton {
-  vertical-align: bottom;
-  padding: 20px;
+
+.searchBar {
+  width: 300px;
+  padding: 10px;
+  display:inline-block;
 }
+
+.paginator {
+  width: 300px;
+  display:inline-block;
+}
+
+.project-description {
+  padding: 10px;
+}
+
+.lastUpdated {
+  padding: 10px;
+}
+
+.issue-more-info {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.issue-label {
+  padding-top: 5px;
+  border-top: 1px solid darkgrey;
+  text-align: left;
+  font-size: 12px;
+  color: #586069;
+  font-weight: bold;
+}
+
+.issue-description {
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.issue-date {
+  text-align: left;
+}
+
+

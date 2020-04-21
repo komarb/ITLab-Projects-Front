@@ -3,18 +3,21 @@ import {useParams} from "react-router-dom";
 import API from "../../api/API";
 import Issue from "../issues/Issue";
 import IssuesList from "../issues/IssuesList";
+import LoadSpinner from "../utils/Loader";
 
 export default function ProjectDetails() {
     const [issues, setIssues] = useState({});
     const [isLoading, setIsLoading] = useState(true);
-    let { projectName } = useParams();
+    let { platform, projectPath } = useParams();
     useEffect(() => {
-        API.get(`/reps/${projectName}/issues?state=all`)
+        API.get(`/reps/${projectPath}/issues?state=all&platform=${platform}`)
             .then(response =>
                 response.data.map(issue => ({
                     name: issue.title,
                     user: issue.user,
+                    description: issue.body,
                     created_at: issue.created_at,
+                    closed_at: issue.closed_at,
                     state: issue.state,
                     html_url: issue.html_url
                 })))
@@ -25,14 +28,13 @@ export default function ProjectDetails() {
             })
             .catch(err => console.log(err));
 
-    }, []);
-
+    }, [platform, projectPath]);
     if(isLoading) {
         return (
-            <div>Loading, please wait...</div>
+            <LoadSpinner/>
         )
     } else {
-        const openedIssues = issues.filter(issue => issue.state === "open").map((issue, index) =>
+        const openedIssues = issues.filter(issue => issue.state === "open" || issue.state === "opened").map((issue, index) =>
             <Issue issue={issue} key={index}/>
         );
 

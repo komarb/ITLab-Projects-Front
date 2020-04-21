@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectsRow from "./ProjectsRow";
 
+
 export default function ProjectsList(props) {
     let projectsSlices = [];
     let i,j,temparray,chunk = 3;
@@ -13,8 +14,9 @@ export default function ProjectsList(props) {
         <ProjectsRow projectsSlice={projectsSlice}/>
     );
     return (
-        <div className="card-deck mb-3 text-center">
-            {projectsRows}
+        <div className="projectList card-deck mb-3 text-center">
+            {props.projects}
+
         </div>
     )
 }
