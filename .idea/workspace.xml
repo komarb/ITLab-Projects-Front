@@ -2,36 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dd20f58-3730-4d2f-93d5-6e4f96995e78" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/reps/Rep.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/reps/RepDetails.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/reps/RepsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/itlab-projects-front.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/itlab-projects-front.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/API.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/API.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/issues/Issue.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/issues/Issue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/issues/IssuesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/issues/IssuesList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/projects/Project.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/projects/ProjectDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/projects/ProjectsList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/projects/ProjectsRow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/utils/Description.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/Description.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/utils/Language.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/Language.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/utils/LastUpdated.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/LastUpdated.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/utils/Loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/Loader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/utils/MoreButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/MoreButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/ProjectDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/ProjectDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/ProjectsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects/ProjectsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/reps/RepsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/reps/RepsList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/utils/NavigationBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/NavigationBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/utils/Paginator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/Paginator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/utils/Platform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/Platform.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/utils/ReadyBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/ReadyBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/utils/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/SearchBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/App.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,6 +137,7 @@
       <workItem from="1596402196759" duration="4871000" />
       <workItem from="1596464237345" duration="12396000" />
       <workItem from="1596537943525" duration="3321000" />
+      <workItem from="1596805374978" duration="6317000" />
     </task>
     <servers />
   </component>

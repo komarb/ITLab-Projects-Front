@@ -3,10 +3,13 @@ import API from '../../api/API';
 import NavigationBar from '../utils/NavigationBar';
 import LoadSpinner from '../utils/Loader';
 import Rep from './Rep';
+import ApiSearchBar from '../utils/ApiSearchBar';
 
 export default function RepsList(props) {
   const [isLoading, setIsLoading] = useState(true);
+  const [isFilter, setIsFilter] = useState(false);
   const [reps, setReps] = useState({});
+  const [data, setData] = useState({});
   const [pagesCount, setPagesCount] = useState({});
   useEffect(() => {
     loadRepositoriesPage(1)
@@ -15,18 +18,25 @@ export default function RepsList(props) {
     await API.get(`/reps?page=${page}`)
       .then((response) => {
         setPagesCount(parseInt(response.headers['x-total-pages']));
-        const repsList = response.data.map((rep, index) => <Rep rep={rep} key={index} />);
-        setReps(repsList);
+        updateReps(response.data);
+        setData(response.data);
         setIsLoading(false);
       })
       .catch((err) => console.log(err));
+  }
+  function updateReps(data, isFilter) {
+    const repsList = data.map((rep, index) => <Rep rep={rep} key={index} />);
+    setReps(repsList);
+    setIsFilter(isFilter)
   }
 
   return (
     <main>
       {isLoading ? <LoadSpinner /> : (
         <>
-          <NavigationBar loadRepositoriesPage={loadRepositoriesPage} pagesCount={pagesCount} />
+          <ApiSearchBar updateFunc={updateReps}/>
+          {isFilter ? "" :
+            <NavigationBar loadRepositoriesPage={loadRepositoriesPage} pagesCount={pagesCount} />}
           <div className="repsList card-deck mb-3 text-center">
             {reps}
           </div>
