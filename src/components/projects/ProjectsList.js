@@ -1,22 +1,41 @@
-import React from "react";
-import ProjectsRow from "./ProjectsRow";
+import React, { useEffect, useState } from 'react';
+import API from '../../api/API';
+import Project from './Project';
+import LoadSpinner from '../utils/Loader';
+import Button from 'react-bootstrap/Button';
+import NavigationBar from '../utils/NavigationBar';
 
 
 export default function ProjectsList(props) {
-    let projectsSlices = [];
-    let i,j,temparray,chunk = 3;
-    for (i=0,j=props.projects.length; i<j; i+=chunk) {
-        temparray = props.projects.slice(i,i+chunk);
-        projectsSlices.push(temparray);
-    }
-    console.log(projectsSlices);
-    const projectsRows = projectsSlices.map((projectsSlice, index) =>
-        <ProjectsRow projectsSlice={projectsSlice}/>
-    );
-    return (
-        <div className="projectList card-deck mb-3 text-center">
-            {props.projects}
-
-        </div>
-    )
+  const [isLoading, setIsLoading] = useState(true);
+  const [projects, setProjects] = useState({});
+  useEffect(() => {
+    loadProjects()
+  }, []);
+  async function loadProjects() {
+    await API.get(`/projects`)
+      .then((response) => {
+        const projectsList = response.data.map((project, index) => <Project project={project} key={index} />);
+        setProjects(projectsList);
+        setIsLoading(false);
+      })
+      .catch((err) => console.log(err));
+  }
+  return (
+    <>
+      <div className="navigationBarWrapper">
+        <NavigationBar loadRepositoriesPage={null} pagesCount={3} />
+        <Button className="toggleContent" href="/reps">Все репозитории</Button>
+      </div>
+      <main>
+        {isLoading ? <LoadSpinner /> : (
+          <>
+            <div className="projectsList">
+              {projects}
+            </div>
+          </>
+        )}
+      </main>
+    </>
+  );
 }

@@ -12,12 +12,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 .load-spinner {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .scrollbar {
   position: relative;
   overflow-y: scroll;
@@ -33,10 +35,22 @@ code {
   padding: 10px;
 }
 
-.project {
+.rep {
   min-width: 300px !important;
 }
 
+.rep > * {
+  margin-bottom: 10px;
+}
+
+.rep a {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rep p {
+  margin-bottom: 0;
+}
 
 .searchBar {
   width: 300px;
@@ -47,14 +61,6 @@ code {
 .paginator {
   width: 300px;
   display:inline-block;
-}
-
-.project-description {
-  padding: 10px;
-}
-
-.lastUpdated {
-  padding: 10px;
 }
 
 .issue-more-info {
@@ -80,5 +86,99 @@ code {
 .issue-date {
   text-align: left;
 }
+.issueLabels p{
+  display: inline-block;
+  padding: 2px 7px 2px 7px;
+  margin: 5px;
+  border-radius: 20px;
+}
+.projectHeader {
+  display: flex;
+  align-items: center;
+}
 
+.projectFooter {
+  display: flex;
+  align-items: center;
+}
 
+.projectFooter > * {
+  margin-right: 15px;
+}
+
+.projectFooter p {
+  margin-bottom: 0;
+}
+.projectFooter .readyBar {
+  min-width: 30%;
+  margin-bottom: 20px;
+}
+.project {
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  border: 1px solid darkgrey;
+}
+
+.project > * {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.project h2 {
+  font-weight: bold;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.project hr {
+  margin-top: 0;
+}
+.project a {
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+.labelsContainer {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  margin-left: auto;
+}
+.labelsList {
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  margin-right: auto;
+  height: 1.5em;
+}
+.label {
+  padding: 0 7px;
+  margin: 0 3px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  border: 1px solid transparent;
+  border-radius: 2em;
+  white-space: nowrap;
+}
+.disableScrollbars *::-webkit-scrollbar {
+  height: 0;
+  background: transparent;
+}
+
+.issuesCount p {
+  display: inline;
+  margin-left: 2px;
+}
+.navigationBar {
+  margin-right: auto;
+}
+.navigationBarWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+}
+
+.navigationBarWrapper .toggleContent {
+  margin: auto;
+}

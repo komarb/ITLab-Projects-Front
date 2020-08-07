@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
 export default class Description extends React.Component {
-    render() {
-        return(
-            <div className="project-description text-muted">
-                {this.props.project.description ? this.props.project.description : "Описание не приведено"}
-            </div>
-        );
-    }
+  render() {
+    return (
+      <p className="repDescription text-muted">
+        {this.props.rep.description ? this.props.rep.description : 'Описание не приведено'}
+      </p>
+    );
+  }
 }

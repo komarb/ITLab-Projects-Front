@@ -1,23 +1,24 @@
-import React from "react";
-import ReadyBar from "../utils/ReadyBar";
-import MoreButton from "../utils/MoreButton";
-import LastUpdated from "../utils/LastUpdated";
-import Platform from "../utils/Platform";
-import Description from "../utils/Description";
-import Language from "../utils/Language";
+import React from 'react';
+import Button from 'react-bootstrap/Button';
+import LabelsList from '../labels/LabelsList';
+import ReadyBar from '../utils/ReadyBar';
+import IssuesCount from '../utils/IssuesCount';
 
-export default class Project extends React.Component {
-    render() {
-        return(
-            <div className="project card mb-4 shadow-sm">
-                <h2 className="card-title">{this.props.project.title}</h2>
-                <Platform project={this.props.project}/>
-                <Description project={this.props.project}/>
-                <Language project={this.props.project}/>
-                <ReadyBar openIssues={this.props.project.open_issues_count}/>
-                <LastUpdated project={this.props.project}/>
-                <MoreButton project={this.props.project}/>
-            </div>
-        );
-    }
+export default function Project(props) {
+  return (
+    <div className="project">
+      <div className="projectHeader">
+        <h2>{props.project.path} - {props.project.humanName}</h2>
+        <LabelsList stackTags={props.project.stackTags}/>
+      </div>
+      <hr />
+      <p>{props.project.description}</p>
+      <div className="projectFooter">
+        <Button href={`/projects/${props.project.path}`}>Репозитории проекта</Button>
+        <ReadyBar count={1}/>
+        <IssuesCount count={4}/>
+        <p className="text-muted">Обновлено 03.08.2020</p>
+      </div>
+    </div>
+  );
 }
