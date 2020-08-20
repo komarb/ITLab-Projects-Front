@@ -16,7 +16,7 @@ export default function Project(props) {
       <div className="projectFooter">
         <Button href={`/projects/${props.project.path}`}>Репозитории проекта</Button>
         <ReadyBar count={1}/>
-        <IssuesCount count={4}/>
+        <IssuesCount count={props.project.reps.length}/>
         <p className="text-muted">Обновлено 03.08.2020</p>
       </div>
     </div>

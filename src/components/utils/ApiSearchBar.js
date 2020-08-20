@@ -22,7 +22,7 @@ export default function ApiSearchBar(props) {
   }
   return (
     <div className="searchBar">
-      <input className="form-control" type="text" placeholder="Поиск" aria-label="Search" onChange={handleChange}/>
+      <input autoFocus className="form-control" type="text" placeholder="Поиск" aria-label="Search" onChange={handleChange}/>
     </div>
   );
 }

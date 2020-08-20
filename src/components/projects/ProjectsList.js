@@ -30,7 +30,7 @@ export default function ProjectsList(props) {
   return (
     <>
       <div className="navigationBarWrapper">
-        <SearchBar data={data} updateFunc={updateProjects} searchField="humanName"/>
+        <SearchBar data={data} updateFunc={updateProjects} searchField="projectName"/>
         <Button className="toggleContent" href="/reps">Все репозитории</Button>
       </div>
       <main>

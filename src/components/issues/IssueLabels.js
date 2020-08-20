@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 export default function IssueLabels(props) {
 
   const labelsList = props.labels.map(
     (label) => (
-      <p style={{backgroundColor: '#'+label.color}}>{label.name}</p>
+      <p className="label" style={{backgroundColor: '#'+label.color}}>{label.name}</p>
     ));
 
   return (

@@ -4,6 +4,7 @@ import NavigationBar from '../utils/NavigationBar';
 import LoadSpinner from '../utils/Loader';
 import Rep from './Rep';
 import ApiSearchBar from '../utils/ApiSearchBar';
+import Button from 'react-bootstrap/Button';
 
 export default function RepsList(props) {
   const [isLoading, setIsLoading] = useState(true);
@@ -12,6 +13,7 @@ export default function RepsList(props) {
   const [data, setData] = useState({});
   const [pagesCount, setPagesCount] = useState({});
   useEffect(() => {
+
     loadRepositoriesPage(1)
   }, []);
   async function loadRepositoriesPage(page) {
@@ -34,9 +36,12 @@ export default function RepsList(props) {
     <main>
       {isLoading ? <LoadSpinner /> : (
         <>
-          <ApiSearchBar updateFunc={updateReps}/>
-          {isFilter ? "" :
-            <NavigationBar loadRepositoriesPage={loadRepositoriesPage} pagesCount={pagesCount} />}
+          <div className="navigationBarWrapper">
+            <ApiSearchBar updateFunc={updateReps}/>
+            {isFilter ? "" :
+              <NavigationBar loadRepositoriesPage={loadRepositoriesPage} pagesCount={pagesCount} />}
+            <Button className="toggleContent" href="/projects">Все проекты</Button>
+          </div>
           <div className="repsList card-deck mb-3 text-center">
             {reps}
           </div>

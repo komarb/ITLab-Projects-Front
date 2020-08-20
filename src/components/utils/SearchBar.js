@@ -5,9 +5,10 @@ export default function SearchBar(props) {
     const value = e.target.value.toLowerCase();
     let filteredData;
     switch (props.searchField) {
-      case "humanName":
+      case "projectName":
         filteredData = props.data.filter(elem => {
-          return (elem.humanName.toLowerCase().includes(value))
+          const projectName = `${elem.path}-${elem.humanName}`;
+          return (projectName.toLowerCase().includes(value))
         });
         break;
       case "name":

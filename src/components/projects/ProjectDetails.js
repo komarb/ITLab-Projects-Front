@@ -36,8 +36,9 @@ export default function ProjectDetails(props) {
     <main>
       {isLoading ? <LoadSpinner /> : (
         <>
-          <SearchBar data={data} updateFunc={updateReps} searchField="name"/>
-          <NavigationBar loadRepositoriesPage={loadProjectRepositories} pagesCount={pagesCount} />
+          <div className="navigationBarWrapper">
+            <SearchBar data={data} updateFunc={updateReps} searchField="name"/>
+          </div>
           <div className="repsList card-deck mb-3 text-center">
             {reps}
           </div>

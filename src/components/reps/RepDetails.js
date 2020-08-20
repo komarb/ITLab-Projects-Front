@@ -4,6 +4,7 @@ import API from '../../api/API';
 import Issue from '../issues/Issue';
 import IssuesList from '../issues/IssuesList';
 import LoadSpinner from '../utils/Loader';
+import RepInfo from '../utils/RepInfo';
 
 export default function RepDetails() {
   const [issues, setIssues] = useState({});
@@ -35,24 +36,14 @@ export default function RepDetails() {
   const closedIssues = issues.filter((issue) => issue.state === 'closed' && issue.pull_request.url === "").map((issue, index) => <Issue issue={issue} key={index} />);
   return (
     <>
-      <h1>{repPath}</h1>
-      <hr />
-      <div className="container">
-        <div className="row">
-          <div className="col-md-6">
-            {rep.meta.description}
-          </div>
-          <div className="col-md-6">
-            <div className="card">
-              <h4 className="card-title">Разработчики</h4>
-              <div className="card">
-                Komar Bogdan
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <IssuesList openedIssues={openedIssues} closedIssues={closedIssues} />
+      <header>
+        <h1>{repPath}</h1>
+        <hr />
+        <RepInfo rep={rep}/>
+      </header>
+      <main>
+        <IssuesList openedIssues={openedIssues} closedIssues={closedIssues} />
+      </main>
     </>
   );
 }

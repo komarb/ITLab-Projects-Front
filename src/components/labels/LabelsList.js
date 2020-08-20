@@ -18,7 +18,7 @@ export default function LabelsList(props) {
 
   return (
     <div className="labelsContainer disableScrollbars">
-      <FontAwesomeIcon icon="angle-left" />
+      <FontAwesomeIcon icon="angle-left"/>
       <div className="labelsList">
         {isLoading ? '' : labels}
       </div>
