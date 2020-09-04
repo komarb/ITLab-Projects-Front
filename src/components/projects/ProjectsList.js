@@ -28,7 +28,7 @@ export default function ProjectsList(props) {
     setProjects(projectsList);
   }
   return (
-    <>
+    <div className="contentWrapper">
       <div className="navigationBarWrapper">
         <SearchBar data={data} updateFunc={updateProjects} searchField="projectName"/>
         <Button className="toggleContent" href="/reps">Все репозитории</Button>
@@ -42,6 +42,6 @@ export default function ProjectsList(props) {
           </>
         )}
       </main>
-    </>
+    </div>
   );
 }

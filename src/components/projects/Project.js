@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import LabelsList from '../labels/LabelsList';
 import ReadyBar from '../utils/ReadyBar';
 import IssuesCount from '../utils/IssuesCount';
-
+import isoToDDMMYYYY from '../utils/dateParsing';
 export default function Project(props) {
   return (
     <div className="project">
@@ -16,8 +16,7 @@ export default function Project(props) {
       <div className="projectFooter">
         <Button href={`/projects/${props.project.path}`}>Репозитории проекта</Button>
         <ReadyBar count={1}/>
-        <IssuesCount count={props.project.reps.length}/>
-        <p className="text-muted">Обновлено 03.08.2020</p>
+        <p className="text-muted">Обновлено {isoToDDMMYYYY(props.project.lastUpdated)}</p>
       </div>
     </div>
   );
